@@ -1,0 +1,401 @@
+ensg_id	gene_name	biotype	tissue	cumulative.expression
+ENSG00000198727.2	MT-CYB	protein_coding	Adipose tissue	0.02945
+ENSG00000198763.3	MT-ND2	protein_coding	Adipose tissue	0.05724
+ENSG00000198888.2	MT-ND1	protein_coding	Adipose tissue	0.08493
+ENSG00000198712.1	MT-CO2	protein_coding	Adipose tissue	0.11209
+ENSG00000198804.2	MT-CO1	protein_coding	Adipose tissue	0.13673
+ENSG00000198840.2	MT-ND3	protein_coding	Adipose tissue	0.15224
+ENSG00000210082.2	J01415.4	smallRNA	Adipose tissue	0.16447
+ENSG00000087086.7	FTL	protein_coding	Adipose tissue	0.17544
+ENSG00000170323.4	FABP4	protein_coding	Adipose tissue	0.18329
+ENSG00000198695.2	MT-ND6	protein_coding	Adipose tissue	0.18985
+ENSG00000225630.1	MTND2P28	pseudogene	Adipose tissue	0.19597
+ENSG00000198786.2	MT-ND5	protein_coding	Adipose tissue	0.2019
+ENSG00000211445.5	GPX3	protein_coding	Adipose tissue	0.20711
+ENSG00000229344.1	RP5-857K21.7	pseudogene	Adipose tissue	0.211
+ENSG00000075624.8	ACTB	protein_coding	Adipose tissue	0.21467
+ENSG00000225972.1	MTND1P23	pseudogene	Adipose tissue	0.2183
+ENSG00000142534.1	RPS11	protein_coding	Adipose tissue	0.22177
+ENSG00000177600.4	RPLP2	protein_coding	Adipose tissue	0.22519
+ENSG00000231500.2	RPS18	protein_coding	Adipose tissue	0.22852
+ENSG00000133112.12	TPT1	protein_coding	Adipose tissue	0.23184
+ENSG00000167996.10	FTH1	protein_coding	Adipose tissue	0.23513
+ENSG00000234961.1	RP11-124N14.3	lncRNA	Adipose tissue	0.23808
+ENSG00000117289.7	TXNIP	protein_coding	Adipose tissue	0.24099
+ENSG00000108298.4	RPL19	protein_coding	Adipose tissue	0.2438
+ENSG00000211459.2	J01415.24	smallRNA	Adipose tissue	0.2465
+ENSG00000112306.7	RPS12	protein_coding	Adipose tissue	0.24912
+ENSG00000196205.7	EEF1A1P5	pseudogene	Adipose tissue	0.25168
+ENSG00000026025.8	VIM	protein_coding	Adipose tissue	0.25418
+ENSG00000161970.7	RPL26	protein_coding	Adipose tissue	0.25659
+ENSG00000205542.6	TMSB4X	protein_coding	Adipose tissue	0.25887
+ENSG00000189058.4	APOD	protein_coding	Adipose tissue	0.26106
+ENSG00000256545.1	AL139819.1	pseudogene	Adipose tissue	0.26322
+ENSG00000137818.7	RPLP1	protein_coding	Adipose tissue	0.26525
+ENSG00000131469.7	RPL27	protein_coding	Adipose tissue	0.26728
+ENSG00000143947.8	RPS27A	protein_coding	Adipose tissue	0.26924
+ENSG00000196616.7	ADH1B	protein_coding	Adipose tissue	0.27119
+ENSG00000034510.4	TMSB10	protein_coding	Adipose tissue	0.27309
+ENSG00000167658.9	EEF2	protein_coding	Adipose tissue	0.27497
+ENSG00000184009.3	ACTG1	protein_coding	Adipose tissue	0.27682
+ENSG00000101335.5	MYL9	protein_coding	Adipose tissue	0.27862
+ENSG00000197766.1	CFD	protein_coding	Adipose tissue	0.2804
+ENSG00000147403.12	RPL10	protein_coding	Adipose tissue	0.28213
+ENSG00000235174.1	RPL39P3	pseudogene	Adipose tissue	0.28386
+ENSG00000100234.9	TIMP3	protein_coding	Adipose tissue	0.28558
+ENSG00000259716.1	RP5-977B1.11	lncRNA	Adipose tissue	0.28727
+ENSG00000113140.6	SPARC	protein_coding	Adipose tissue	0.28895
+ENSG00000099194.4	SCD	protein_coding	Adipose tissue	0.29062
+ENSG00000232573.1	RPL3P4	pseudogene	Adipose tissue	0.29227
+ENSG00000236552.1	RPL13AP5	pseudogene	Adipose tissue	0.29391
+ENSG00000244398.1	RP11-466H18.1	pseudogene	Adipose tissue	0.29553
+ENSG00000213442.4	RPL18AP3	pseudogene	Adipose tissue	0.29715
+ENSG00000227081.4	RP11-543P15.1	pseudogene	Adipose tissue	0.29875
+ENSG00000105193.3	RPS16	protein_coding	Adipose tissue	0.3003
+ENSG00000165507.7	C10orf10	protein_coding	Adipose tissue	0.30185
+ENSG00000089157.11	RPLP0	protein_coding	Adipose tissue	0.30337
+ENSG00000156508.12	EEF1A1	protein_coding	Adipose tissue	0.30488
+ENSG00000166710.11	B2M	protein_coding	Adipose tissue	0.30636
+ENSG00000083845.3	RPS5	protein_coding	Adipose tissue	0.30784
+ENSG00000161016.10	RPL8	protein_coding	Adipose tissue	0.3093
+ENSG00000142541.10	RPL13A	protein_coding	Adipose tissue	0.31077
+ENSG00000100316.11	RPL3	protein_coding	Adipose tissue	0.31224
+ENSG00000197956.4	S100A6	protein_coding	Adipose tissue	0.31369
+ENSG00000142089.9	IFITM3	protein_coding	Adipose tissue	0.31511
+ENSG00000100097.7	LGALS1	protein_coding	Adipose tissue	0.31654
+ENSG00000183531.1	Z98256.1	pseudogene	Adipose tissue	0.31794
+ENSG00000110700.2	RPS13	protein_coding	Adipose tissue	0.31933
+ENSG00000135821.10	GLUL	protein_coding	Adipose tissue	0.32069
+ENSG00000204592.5	HLA-E	protein_coding	Adipose tissue	0.32202
+ENSG00000137154.8	RPS6	protein_coding	Adipose tissue	0.32333
+ENSG00000187288.6	CIDEC	protein_coding	Adipose tissue	0.32463
+ENSG00000232856.2	AC008038.1	protein_coding	Adipose tissue	0.32592
+ENSG00000115268.3	RPS15	protein_coding	Adipose tissue	0.32719
+ENSG00000123689.5	G0S2	protein_coding	Adipose tissue	0.32847
+ENSG00000166819.7	PLIN1	protein_coding	Adipose tissue	0.32973
+ENSG00000019582.10	CD74	protein_coding	Adipose tissue	0.33099
+ENSG00000177666.11	PNPLA2	protein_coding	Adipose tissue	0.33223
+ENSG00000257309.1	RP11-603J24.18	lncRNA	Adipose tissue	0.33348
+ENSG00000141753.5	IGFBP4	protein_coding	Adipose tissue	0.33472
+ENSG00000111640.8	GAPDH	protein_coding	Adipose tissue	0.33595
+ENSG00000120129.4	DUSP1	protein_coding	Adipose tissue	0.33718
+ENSG00000234851.3	RP11-3P17.3	pseudogene	Adipose tissue	0.33839
+ENSG00000152583.7	SPARCL1	protein_coding	Adipose tissue	0.33961
+ENSG00000163453.6	IGFBP7	protein_coding	Adipose tissue	0.34081
+ENSG00000150991.9	UBC	protein_coding	Adipose tissue	0.34201
+ENSG00000128016.3	ZFP36	protein_coding	Adipose tissue	0.34321
+ENSG00000148671.7	C10orf116	protein_coding	Adipose tissue	0.3444
+ENSG00000174444.9	RPL4	protein_coding	Adipose tissue	0.34557
+ENSG00000108518.7	PFN1	protein_coding	Adipose tissue	0.34673
+ENSG00000118181.5	RPS25	protein_coding	Adipose tissue	0.34789
+ENSG00000173432.6	SAA1	protein_coding	Adipose tissue	0.34904
+ENSG00000233476.2	EEF1A1P6	pseudogene	Adipose tissue	0.35019
+ENSG00000167468.10	GPX4	protein_coding	Adipose tissue	0.35133
+ENSG00000137970.7	RP11-122C9.1	pseudogene	Adipose tissue	0.35247
+ENSG00000234745.3	HLA-B	protein_coding	Adipose tissue	0.35359
+ENSG00000197746.7	PSAP	protein_coding	Adipose tissue	0.3547
+ENSG00000125148.6	MT2A	protein_coding	Adipose tissue	0.35581
+ENSG00000143878.8	RHOB	protein_coding	Adipose tissue	0.3569
+ENSG00000227097.4	RP11-742N3.1	pseudogene	Adipose tissue	0.35798
+ENSG00000215472.3	RPL17	protein_coding	Adipose tissue	0.35903
+ENSG00000250610.1	RP11-738E22.2	lncRNA	Adipose tissue	0.36005
+ENSG00000087086.7	FTL	protein_coding	Fibroblasts	0.02576
+ENSG00000198763.3	MT-ND2	protein_coding	Fibroblasts	0.04501
+ENSG00000198712.1	MT-CO2	protein_coding	Fibroblasts	0.06372
+ENSG00000198804.2	MT-CO1	protein_coding	Fibroblasts	0.08108
+ENSG00000115414.13	FN1	protein_coding	Fibroblasts	0.09773
+ENSG00000198888.2	MT-ND1	protein_coding	Fibroblasts	0.11386
+ENSG00000198727.2	MT-CYB	protein_coding	Fibroblasts	0.12596
+ENSG00000167996.10	FTH1	protein_coding	Fibroblasts	0.13518
+ENSG00000198840.2	MT-ND3	protein_coding	Fibroblasts	0.14208
+ENSG00000075624.8	ACTB	protein_coding	Fibroblasts	0.14895
+ENSG00000210082.2	J01415.4	smallRNA	Fibroblasts	0.15539
+ENSG00000231500.2	RPS18	protein_coding	Fibroblasts	0.16071
+ENSG00000198786.2	MT-ND5	protein_coding	Fibroblasts	0.16571
+ENSG00000034510.4	TMSB10	protein_coding	Fibroblasts	0.1704
+ENSG00000198695.2	MT-ND6	protein_coding	Fibroblasts	0.17492
+ENSG00000234961.1	RP11-124N14.3	lncRNA	Fibroblasts	0.17858
+ENSG00000133112.12	TPT1	protein_coding	Fibroblasts	0.18203
+ENSG00000112306.7	RPS12	protein_coding	Fibroblasts	0.18546
+ENSG00000125148.6	MT2A	protein_coding	Fibroblasts	0.18887
+ENSG00000196205.7	EEF1A1P5	pseudogene	Fibroblasts	0.19215
+ENSG00000163661.3	PTX3	protein_coding	Fibroblasts	0.19534
+ENSG00000184009.3	ACTG1	protein_coding	Fibroblasts	0.19851
+ENSG00000111640.8	GAPDH	protein_coding	Fibroblasts	0.20157
+ENSG00000205542.6	TMSB4X	protein_coding	Fibroblasts	0.20451
+ENSG00000026025.8	VIM	protein_coding	Fibroblasts	0.20744
+ENSG00000197956.4	S100A6	protein_coding	Fibroblasts	0.21035
+ENSG00000142534.1	RPS11	protein_coding	Fibroblasts	0.21323
+ENSG00000137818.7	RPLP1	protein_coding	Fibroblasts	0.21608
+ENSG00000089157.11	RPLP0	protein_coding	Fibroblasts	0.21879
+ENSG00000131469.7	RPL27	protein_coding	Fibroblasts	0.22134
+ENSG00000161970.7	RPL26	protein_coding	Fibroblasts	0.22387
+ENSG00000108298.4	RPL19	protein_coding	Fibroblasts	0.22637
+ENSG00000105372.1	RPS19	protein_coding	Fibroblasts	0.22884
+ENSG00000211459.2	J01415.24	smallRNA	Fibroblasts	0.23119
+ENSG00000142156.9	COL6A1	protein_coding	Fibroblasts	0.23353
+ENSG00000167658.9	EEF2	protein_coding	Fibroblasts	0.23579
+ENSG00000164692.12	COL1A2	protein_coding	Fibroblasts	0.23803
+ENSG00000177600.4	RPLP2	protein_coding	Fibroblasts	0.24022
+ENSG00000143947.8	RPS27A	protein_coding	Fibroblasts	0.24238
+ENSG00000213442.4	RPL18AP3	pseudogene	Fibroblasts	0.24444
+ENSG00000108518.7	PFN1	protein_coding	Fibroblasts	0.24649
+ENSG00000083845.3	RPS5	protein_coding	Fibroblasts	0.24847
+ENSG00000142173.10	COL6A2	protein_coding	Fibroblasts	0.25037
+ENSG00000235174.1	RPL39P3	pseudogene	Fibroblasts	0.25223
+ENSG00000156508.12	EEF1A1	protein_coding	Fibroblasts	0.25401
+ENSG00000167460.9	TPM4	protein_coding	Fibroblasts	0.25574
+ENSG00000168542.8	COL3A1	protein_coding	Fibroblasts	0.25742
+ENSG00000140988.10	RPS2	protein_coding	Fibroblasts	0.25908
+ENSG00000161016.10	RPL8	protein_coding	Fibroblasts	0.26074
+ENSG00000105193.3	RPS16	protein_coding	Fibroblasts	0.26237
+ENSG00000110700.2	RPS13	protein_coding	Fibroblasts	0.26396
+ENSG00000233476.2	EEF1A1P6	pseudogene	Fibroblasts	0.26556
+ENSG00000108821.8	COL1A1	protein_coding	Fibroblasts	0.26713
+ENSG00000163191.5	S100A11	protein_coding	Fibroblasts	0.2687
+ENSG00000244398.1	RP11-466H18.1	pseudogene	Fibroblasts	0.27026
+ENSG00000087245.8	MMP2	protein_coding	Fibroblasts	0.27182
+ENSG00000137801.8	THBS1	protein_coding	Fibroblasts	0.27335
+ENSG00000197746.7	PSAP	protein_coding	Fibroblasts	0.27482
+ENSG00000225630.1	MTND2P28	pseudogene	Fibroblasts	0.27627
+ENSG00000150991.9	UBC	protein_coding	Fibroblasts	0.27772
+ENSG00000142871.10	CYR61	protein_coding	Fibroblasts	0.27915
+ENSG00000232856.2	AC008038.1	protein_coding	Fibroblasts	0.28055
+ENSG00000174444.9	RPL4	protein_coding	Fibroblasts	0.28195
+ENSG00000234851.3	RP11-3P17.3	pseudogene	Fibroblasts	0.28334
+ENSG00000100097.7	LGALS1	protein_coding	Fibroblasts	0.28473
+ENSG00000227081.4	RP11-543P15.1	pseudogene	Fibroblasts	0.2861
+ENSG00000130255.6	RPL36	protein_coding	Fibroblasts	0.28746
+ENSG00000164111.9	ANXA5	protein_coding	Fibroblasts	0.28881
+ENSG00000164442.7	CITED2	protein_coding	Fibroblasts	0.29015
+ENSG00000106366.5	SERPINE1	protein_coding	Fibroblasts	0.29148
+ENSG00000143387.8	CTSK	protein_coding	Fibroblasts	0.29281
+ENSG00000142541.10	RPL13A	protein_coding	Fibroblasts	0.29413
+ENSG00000142089.9	IFITM3	protein_coding	Fibroblasts	0.29544
+ENSG00000221792.1	MIR1282	smallRNA	Fibroblasts	0.29676
+ENSG00000236552.1	RPL13AP5	pseudogene	Fibroblasts	0.29804
+ENSG00000147403.12	RPL10	protein_coding	Fibroblasts	0.2993
+ENSG00000115268.3	RPS15	protein_coding	Fibroblasts	0.30055
+ENSG00000166710.11	B2M	protein_coding	Fibroblasts	0.3018
+ENSG00000011465.12	DCN	protein_coding	Fibroblasts	0.30304
+ENSG00000102265.7	TIMP1	protein_coding	Fibroblasts	0.30428
+ENSG00000215472.3	RPL17	protein_coding	Fibroblasts	0.30549
+ENSG00000104904.4	OAZ1	protein_coding	Fibroblasts	0.3067
+ENSG00000196924.9	FLNA	protein_coding	Fibroblasts	0.30791
+ENSG00000137154.8	RPS6	protein_coding	Fibroblasts	0.30911
+ENSG00000179218.6	CALR	protein_coding	Fibroblasts	0.3103
+ENSG00000120708.9	TGFBI	protein_coding	Fibroblasts	0.31145
+ENSG00000065978.12	YBX1	protein_coding	Fibroblasts	0.31254
+ENSG00000141753.5	IGFBP4	protein_coding	Fibroblasts	0.31363
+ENSG00000167526.9	RPL13	protein_coding	Fibroblasts	0.31471
+ENSG00000182718.11	ANXA2	protein_coding	Fibroblasts	0.31579
+ENSG00000227097.4	RP11-742N3.1	pseudogene	Fibroblasts	0.31686
+ENSG00000044574.6	HSPA5	protein_coding	Fibroblasts	0.31793
+ENSG00000234797.4	RPS3AP6	pseudogene	Fibroblasts	0.31899
+ENSG00000164733.14	CTSB	protein_coding	Fibroblasts	0.32003
+ENSG00000213553.3	RPLP0P6	pseudogene	Fibroblasts	0.32106
+ENSG00000166794.4	PPIB	protein_coding	Fibroblasts	0.32209
+ENSG00000168028.8	RPSA	protein_coding	Fibroblasts	0.32311
+ENSG00000189058.4	APOD	protein_coding	Fibroblasts	0.32412
+ENSG00000177700.5	POLR2L	protein_coding	Fibroblasts	0.32512
+ENSG00000257309.1	RP11-603J24.18	lncRNA	Fibroblasts	0.32611
+ENSG00000198804.2	MT-CO1	protein_coding	Muscle	0.04846
+ENSG00000198727.2	MT-CYB	protein_coding	Muscle	0.08825
+ENSG00000143632.8	ACTA1	protein_coding	Muscle	0.1251
+ENSG00000198888.2	MT-ND1	protein_coding	Muscle	0.16163
+ENSG00000198712.1	MT-CO2	protein_coding	Muscle	0.1944
+ENSG00000104879.3	CKM	protein_coding	Muscle	0.22213
+ENSG00000198763.3	MT-ND2	protein_coding	Muscle	0.2466
+ENSG00000210082.2	J01415.4	smallRNA	Muscle	0.26881
+ENSG00000198695.2	MT-ND6	protein_coding	Muscle	0.284
+ENSG00000175084.7	DES	protein_coding	Muscle	0.29909
+ENSG00000198840.2	MT-ND3	protein_coding	Muscle	0.31391
+ENSG00000111245.8	MYL2	protein_coding	Muscle	0.32724
+ENSG00000198786.2	MT-ND5	protein_coding	Muscle	0.33899
+ENSG00000105048.9	TNNT1	protein_coding	Muscle	0.3483
+ENSG00000225630.1	MTND2P28	pseudogene	Muscle	0.35748
+ENSG00000229344.1	RP5-857K21.7	pseudogene	Muscle	0.36633
+ENSG00000111640.8	GAPDH	protein_coding	Muscle	0.37486
+ENSG00000225972.1	MTND1P23	pseudogene	Muscle	0.38303
+ENSG00000258444.1	CTD-2201G16.1	lncRNA	Muscle	0.3907
+ENSG00000101470.5	TNNC2	protein_coding	Muscle	0.39776
+ENSG00000133112.12	TPT1	protein_coding	Muscle	0.40411
+ENSG00000198125.7	MB	protein_coding	Muscle	0.41016
+ENSG00000173991.4	TCAP	protein_coding	Muscle	0.41613
+ENSG00000092054.11	MYH7	protein_coding	Muscle	0.42192
+ENSG00000114854.3	TNNC1	protein_coding	Muscle	0.42763
+ENSG00000196091.7	MYBPC1	protein_coding	Muscle	0.43203
+ENSG00000198467.7	TPM2	protein_coding	Muscle	0.43608
+ENSG00000211459.2	J01415.24	smallRNA	Muscle	0.44011
+ENSG00000239474.2	KBTBD10	protein_coding	Muscle	0.4441
+ENSG00000168530.11	MYL1	protein_coding	Muscle	0.44797
+ENSG00000130598.11	TNNI2	protein_coding	Muscle	0.45166
+ENSG00000109061.8	MYH1	protein_coding	Muscle	0.4553
+ENSG00000149925.12	ALDOA	protein_coding	Muscle	0.45881
+ENSG00000234638.1	AC053503.6	lncRNA	Muscle	0.46209
+ENSG00000112096.11	SOD2	protein_coding	Muscle	0.46511
+ENSG00000180209.7	MYLPF	protein_coding	Muscle	0.4681
+ENSG00000068976.8	PYGM	protein_coding	Muscle	0.47104
+ENSG00000004799.6	PDK4	protein_coding	Muscle	0.47387
+ENSG00000022267.11	FHL1	protein_coding	Muscle	0.47658
+ENSG00000137818.7	RPLP1	protein_coding	Muscle	0.47926
+ENSG00000060138.8	CSDA	protein_coding	Muscle	0.48191
+ENSG00000101210.6	EEF1A2	protein_coding	Muscle	0.48454
+ENSG00000108515.12	ENO3	protein_coding	Muscle	0.48713
+ENSG00000130595.11	TNNT3	protein_coding	Muscle	0.48968
+ENSG00000164879.5	CA3	protein_coding	Muscle	0.49214
+ENSG00000150991.9	UBC	protein_coding	Muscle	0.49456
+ENSG00000167658.9	EEF2	protein_coding	Muscle	0.49675
+ENSG00000177791.10	MYOZ1	protein_coding	Muscle	0.4989
+ENSG00000154553.8	PDLIM3	protein_coding	Muscle	0.50098
+ENSG00000004776.5	HSPB6	protein_coding	Muscle	0.50296
+ENSG00000156885.4	COX6A2	protein_coding	Muscle	0.50485
+ENSG00000142534.1	RPS11	protein_coding	Muscle	0.50673
+ENSG00000196296.8	ATP2A1	protein_coding	Muscle	0.50855
+ENSG00000108298.4	RPL19	protein_coding	Muscle	0.51028
+ENSG00000170290.3	SLN	protein_coding	Muscle	0.512
+ENSG00000197893.8	NRAP	protein_coding	Muscle	0.51367
+ENSG00000109846.3	CRYAB	protein_coding	Muscle	0.51534
+ENSG00000232856.2	AC008038.1	protein_coding	Muscle	0.517
+ENSG00000259827.1	RP11-343H19.2	lncRNA	Muscle	0.51863
+ENSG00000187193.8	MT1X	protein_coding	Muscle	0.52021
+ENSG00000077522.7	ACTN2	protein_coding	Muscle	0.52177
+ENSG00000185482.3	STAC3	protein_coding	Muscle	0.52327
+ENSG00000231500.2	RPS18	protein_coding	Muscle	0.52474
+ENSG00000158022.6	TRIM63	protein_coding	Muscle	0.5262
+ENSG00000101608.5	MYL12A	protein_coding	Muscle	0.52763
+ENSG00000128591.11	FLNC	protein_coding	Muscle	0.52904
+ENSG00000117289.7	TXNIP	protein_coding	Muscle	0.53042
+ENSG00000086967.8	MYBPC2	protein_coding	Muscle	0.53178
+ENSG00000131469.7	RPL27	protein_coding	Muscle	0.53313
+ENSG00000151729.5	SLC25A4	protein_coding	Muscle	0.53447
+ENSG00000106211.7	HSPB1	protein_coding	Muscle	0.53578
+ENSG00000099875.8	MKNK2	protein_coding	Muscle	0.53708
+ENSG00000110955.3	ATP5B	protein_coding	Muscle	0.53838
+ENSG00000240045.1	RP11-451G4.2	lncRNA	Muscle	0.53965
+ENSG00000096384.13	HSP90AB1	protein_coding	Muscle	0.54091
+ENSG00000177600.4	RPLP2	protein_coding	Muscle	0.54214
+ENSG00000130600.9	H19	lncRNA	Muscle	0.54337
+ENSG00000161970.7	RPL26	protein_coding	Muscle	0.54458
+ENSG00000257514.1	RP11-755O11.2	lncRNA	Muscle	0.54579
+ENSG00000164309.10	CMYA5	protein_coding	Muscle	0.54697
+ENSG00000183091.13	NEB	protein_coding	Muscle	0.5481
+ENSG00000173641.12	HSPB7	protein_coding	Muscle	0.5492
+ENSG00000125148.6	MT2A	protein_coding	Muscle	0.55029
+ENSG00000112306.7	RPS12	protein_coding	Muscle	0.55137
+ENSG00000136717.10	BIN1	protein_coding	Muscle	0.55245
+ENSG00000135821.10	GLUL	protein_coding	Muscle	0.55352
+ENSG00000105193.3	RPS16	protein_coding	Muscle	0.55459
+ENSG00000160808.5	MYL3	protein_coding	Muscle	0.55566
+ENSG00000089157.11	RPLP0	protein_coding	Muscle	0.55672
+ENSG00000183386.5	FHL3	protein_coding	Muscle	0.55777
+ENSG00000121769.3	FABP3	protein_coding	Muscle	0.55881
+ENSG00000125414.11	MYH2	protein_coding	Muscle	0.55984
+ENSG00000143318.7	CASQ1	protein_coding	Muscle	0.56087
+ENSG00000110700.2	RPS13	protein_coding	Muscle	0.5619
+ENSG00000087086.7	FTL	protein_coding	Muscle	0.56292
+ENSG00000147403.12	RPL10	protein_coding	Muscle	0.56394
+ENSG00000167996.10	FTH1	protein_coding	Muscle	0.56495
+ENSG00000009307.11	CSDE1	protein_coding	Muscle	0.56597
+ENSG00000213442.4	RPL18AP3	pseudogene	Muscle	0.56698
+ENSG00000169714.12	CNBP	protein_coding	Muscle	0.56798
+ENSG00000198804.2	MT-CO1	protein_coding	Skin	0.02888
+ENSG00000186395.5	KRT10	protein_coding	Skin	0.0547
+ENSG00000198712.1	MT-CO2	protein_coding	Skin	0.07803
+ENSG00000198727.2	MT-CYB	protein_coding	Skin	0.09909
+ENSG00000198888.2	MT-ND1	protein_coding	Skin	0.11808
+ENSG00000198763.3	MT-ND2	protein_coding	Skin	0.13437
+ENSG00000167768.4	KRT1	protein_coding	Skin	0.14997
+ENSG00000210082.2	J01415.4	smallRNA	Skin	0.1624
+ENSG00000198695.2	MT-ND6	protein_coding	Skin	0.17379
+ENSG00000198840.2	MT-ND3	protein_coding	Skin	0.18512
+ENSG00000186847.5	KRT14	protein_coding	Skin	0.19385
+ENSG00000198786.2	MT-ND5	protein_coding	Skin	0.20159
+ENSG00000172867.3	KRT2	protein_coding	Skin	0.2091
+ENSG00000231500.2	RPS18	protein_coding	Skin	0.2162
+ENSG00000186081.6	KRT5	protein_coding	Skin	0.22182
+ENSG00000137818.7	RPLP1	protein_coding	Skin	0.22709
+ENSG00000229344.1	RP5-857K21.7	pseudogene	Skin	0.23214
+ENSG00000225630.1	MTND2P28	pseudogene	Skin	0.23709
+ENSG00000142534.1	RPS11	protein_coding	Skin	0.24187
+ENSG00000188508.5	KRTDAP	protein_coding	Skin	0.24635
+ENSG00000112378.9	PERP	protein_coding	Skin	0.25066
+ENSG00000112306.7	RPS12	protein_coding	Skin	0.25473
+ENSG00000178372.6	CALML5	protein_coding	Skin	0.25863
+ENSG00000211459.2	J01415.24	smallRNA	Skin	0.26253
+ENSG00000225972.1	MTND1P23	pseudogene	Skin	0.26639
+ENSG00000108298.4	RPL19	protein_coding	Skin	0.27003
+ENSG00000177600.4	RPLP2	protein_coding	Skin	0.27327
+ENSG00000189001.4	SBSN	protein_coding	Skin	0.27645
+ENSG00000083845.3	RPS5	protein_coding	Skin	0.27952
+ENSG00000213442.4	RPL18AP3	pseudogene	Skin	0.28253
+ENSG00000131469.7	RPL27	protein_coding	Skin	0.28545
+ENSG00000232573.1	RPL3P4	pseudogene	Skin	0.28835
+ENSG00000236552.1	RPL13AP5	pseudogene	Skin	0.29099
+ENSG00000161016.10	RPL8	protein_coding	Skin	0.29356
+ENSG00000161970.7	RPL26	protein_coding	Skin	0.2961
+ENSG00000105372.1	RPS19	protein_coding	Skin	0.29855
+ENSG00000161634.7	DCD	protein_coding	Skin	0.301
+ENSG00000089157.11	RPLP0	protein_coding	Skin	0.30342
+ENSG00000232856.2	AC008038.1	protein_coding	Skin	0.30583
+ENSG00000115268.3	RPS15	protein_coding	Skin	0.30818
+ENSG00000087086.7	FTL	protein_coding	Skin	0.31052
+ENSG00000143947.8	RPS27A	protein_coding	Skin	0.31284
+ENSG00000244398.1	RP11-466H18.1	pseudogene	Skin	0.31516
+ENSG00000235174.1	RPL39P3	pseudogene	Skin	0.31747
+ENSG00000075624.8	ACTB	protein_coding	Skin	0.31975
+ENSG00000142541.10	RPL13A	protein_coding	Skin	0.32202
+ENSG00000100316.11	RPL3	protein_coding	Skin	0.32422
+ENSG00000227081.4	RP11-543P15.1	pseudogene	Skin	0.3264
+ENSG00000196205.7	EEF1A1P5	pseudogene	Skin	0.32857
+ENSG00000203782.4	LOR	protein_coding	Skin	0.33071
+ENSG00000184009.3	ACTG1	protein_coding	Skin	0.33282
+ENSG00000133112.12	TPT1	protein_coding	Skin	0.33492
+ENSG00000227097.4	RP11-742N3.1	pseudogene	Skin	0.33694
+ENSG00000105193.3	RPS16	protein_coding	Skin	0.33895
+ENSG00000161249.12	DMKN	protein_coding	Skin	0.34096
+ENSG00000147403.12	RPL10	protein_coding	Skin	0.34296
+ENSG00000178934.3	LGALS7B	protein_coding	Skin	0.34485
+ENSG00000175793.9	SFN	protein_coding	Skin	0.34673
+ENSG00000117289.7	TXNIP	protein_coding	Skin	0.34855
+ENSG00000167526.9	RPL13	protein_coding	Skin	0.35035
+ENSG00000111640.8	GAPDH	protein_coding	Skin	0.35211
+ENSG00000137154.8	RPS6	protein_coding	Skin	0.35387
+ENSG00000167658.9	EEF2	protein_coding	Skin	0.35562
+ENSG00000110700.2	RPS13	protein_coding	Skin	0.35732
+ENSG00000130255.6	RPL36	protein_coding	Skin	0.359
+ENSG00000234851.3	RP11-3P17.3	pseudogene	Skin	0.36067
+ENSG00000140988.10	RPS2	protein_coding	Skin	0.36228
+ENSG00000174444.9	RPL4	protein_coding	Skin	0.36383
+ENSG00000106211.7	HSPB1	protein_coding	Skin	0.36538
+ENSG00000198755.6	RPL10A	protein_coding	Skin	0.36689
+ENSG00000137970.7	RP11-122C9.1	pseudogene	Skin	0.36824
+ENSG00000096696.8	DSP	protein_coding	Skin	0.36955
+ENSG00000148303.12	RPL7A	protein_coding	Skin	0.37086
+ENSG00000156508.12	EEF1A1	protein_coding	Skin	0.37216
+ENSG00000198034.6	RPS4X	protein_coding	Skin	0.37345
+ENSG00000189058.4	APOD	protein_coding	Skin	0.37474
+ENSG00000063177.7	RPL18	protein_coding	Skin	0.37602
+ENSG00000173801.11	JUP	protein_coding	Skin	0.37728
+ENSG00000203785.4	SPRR2E	protein_coding	Skin	0.37853
+ENSG00000120129.4	DUSP1	protein_coding	Skin	0.37976
+ENSG00000244313.2	RP11-425L10.1	pseudogene	Skin	0.38097
+ENSG00000145824.8	CXCL14	protein_coding	Skin	0.38217
+ENSG00000124466.6	LYPD3	protein_coding	Skin	0.38334
+ENSG00000081277.7	PKP1	protein_coding	Skin	0.38449
+ENSG00000215472.3	RPL17	protein_coding	Skin	0.38564
+ENSG00000167656.4	LY6D	protein_coding	Skin	0.38679
+ENSG00000144713.8	RPL32	protein_coding	Skin	0.38793
+ENSG00000234745.3	HLA-B	protein_coding	Skin	0.38907
+ENSG00000118181.5	RPS25	protein_coding	Skin	0.39021
+ENSG00000108518.7	PFN1	protein_coding	Skin	0.39135
+ENSG00000142676.8	RPL11	protein_coding	Skin	0.39248
+ENSG00000234797.4	RPS3AP6	pseudogene	Skin	0.39356
+ENSG00000132475.3	H3F3B	protein_coding	Skin	0.39464
+ENSG00000126233.1	SLURP1	protein_coding	Skin	0.39571
+ENSG00000187193.8	MT1X	protein_coding	Skin	0.39678
+ENSG00000259827.1	RP11-343H19.2	lncRNA	Skin	0.39783
+ENSG00000164587.7	RPS14	protein_coding	Skin	0.39887
+ENSG00000142937.7	RPS8	protein_coding	Skin	0.39989
+ENSG00000105373.12	GLTSCR2	protein_coding	Skin	0.40089
+ENSG00000150991.9	UBC	protein_coding	Skin	0.40189
