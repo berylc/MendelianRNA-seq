@@ -1,115 +1,71 @@
 library(argparse)
 library(ggplot2)
-source("/humgen/atgu1/fs03/berylc/MuscDisease/QC/SexCheck/scripts/sourceSex.R")
-parser <- ArgumentParser(description='Sex Check QC')
-
-parser$add_argument('-gtexphenotype',help='GTEx phenotype file, default stored',default='/humgen/atgu1/fs03/berylc/MuscDisease/QC/SexCheck/data/GTEx_Analysis_2015-01-12_Annotations_SubjectPhenotypesDS.txt')
-
-parser$add_argument('-patientrpkm',help='Gene-level RPKM file output ')
-
-parser$add_argument('-sexbiasedgenes',help='Sex Biased Genes to differentiate samples on, Mele genelist stored',default='/humgen/atgu1/fs03/berylc/MuscDisease/QC/SexCheck/data/MeleSexBiasedGenelist.txt')
-
-parser$add_argument('-gtexXIST_ychrom',help='Precomputed XIST and Ychrom expression file from GTEX',default='/humgen/atgu1/fs03/berylc/MuscDisease/QC/SexCheck/data/GTExGender_Xist_YchromAvg_expression.txt')
-
-parser$add_argument('-gtex_allSexBiased',help='Precomputed sex biased expression file from GTEX',default='/humgen/atgu1/fs03/berylc/MuscDisease/QC/SexCheck/data/GTExGender_AllSexBiased_expression.txt')
-
-
-parser$add_argument('-out',help='PDF to write plots to')
+library(plyr)
+library(dplyr)
+source('./bin.R')
+parser <- ArgumentParser(description='Compare patient expression values to GTEX samples to confirm sex. Currently set up for muscle tissue.')
+parser$add_argument('-patient_rpkm',help='Patient RPKM file (i.e. *.genes.rpkm.gct file from RNASeQC output)')
+parser$add_argument('-gtex_sex_biased',help='Precomputed sex biased expression file from GTEX',default='../data/gtex_expression_sex_biased.txt')
+parser$add_argument('-out_file',help='File name prefix for output file')
 args <- parser$parse_args()
 
-sexBiasedGenes<-read.delim(args$sexbiasedgenes,header=T,stringsAsFactors = F,strip.white=T)
-sexBiasedGenes_yChrom<-subset(sexBiasedGenes,chr=="chrY")
-gtex_phenotypes<-read.delim(args$gtexphenotype,header = T,stringsAsFactors = F)
-patients_rpkm<-read.delim(args$patientrpkm,header=T, stringsAsFactors = F,skip=2)
+gtex_sex_biased_rpkm<-read.delim(args$gtex_sex_biased,stringsAsFactors=F, row.names=1)
+patients_rpkm<-read.delim(args$patient_rpkm,header=T, stringsAsFactors = F,skip=2)
 
-gtex_XIST_yhcrom<-read.delim(args$gtexXIST_ychrom,stringsAsFactors=F)
+patients_rpkm<- extractGenesOfInterest(patients_rpkm, sex_biased_genes$gene_id)
 
-gtex_allSexBiased<-read.delim(args$gtex_allSexBiased,stringsAsFactors=F)
+genes_in_both <- intersect(names(gtex_sex_biased_rpkm), names(patients_rpkm))
+all_sex_biased <- rbind(subset(gtex_sex_biased_rpkm, select = genes_in_both), subset(patients_rpkm, select = genes_in_both))
 
-getSexBiased_xist_y(patients_rpkm,patientcolbegin=3,out="patients",sexBiasedGenes_yChrom)
+PCADat <- performPCA(all_sex_biased, "sex",expected_annotations =c("male","female") )
 
-getcombinedPCAData(gtex_allSexBiased,patients_rpkm,out="all",sexBiasedGenes=sexBiasedGenes)
+chrom_y_genes <-  subset(sex_biased_genes, chr == "chrY")$gene_id
+all_xist_y <- getXISTAvgYChromExpr(all_sex_biased,chrom_y_genes )
 
-PCADat_pcs<-data.frame(PCADat_all$x)
-addPhenotype(All=PCADat_pcs,"bothPCS",gtex_phenotypes=gtex_phenotypes)
-names(WithSex_bothPCS)[ncol(WithSex_bothPCS)]<-"gender"
-XIST_Y_patients$gender="Patient"
-pdf(args$out)
+plot_theme <- theme_bw()+theme(plot.title=element_text(size=20), axis.text=element_text(size=15), axis.title=element_text(size=14), legend.title=element_blank(), legend.text=element_text(size=10),panel.grid.major=element_blank())
+colours <- scale_colour_manual(values=c("#700D4F","#EAA8D4","#87B2DD"))
 
 
-ggplot(gtex_XIST_yhcrom,aes(x=XIST,y=avgYchrom,col=gender))+geom_point(size=4)+theme_classic()+theme(plot.title=element_text(size=25),axis.text=element_text(size=15),axis.title=element_text(size=20),legend.title=element_blank(),legend.text=element_text(size=20))+ylab("mean expression \n from Y chrom sex biased genes") + xlab("XIST expression")+geom_point(data=XIST_Y_patients,aes(x=XIST,y=avgYchrom),size=4)
+pdfFile = paste(args$out_file, ".pdf", sep="")
+pdf(pdfFile, width =8, height =6)
 
+plot(PCA,type="l",main="Variance Explained by PCs")
 
+ggplot( PCADat %>% arrange(sex), aes( x = PC1, y = PC2, col = sex))+geom_point( size=3  ) + 
+  plot_theme + colours +
+  xlab( paste( "PC1 (", signif( PoV[1]*100, 2 ), "%)", sep = "" ))+ylab( paste (" PC2 (",signif( PoV[2]*100, 2 ), "%)", sep = ""))
 
-plot(PCADat_all,type="l",main="Variance Explained by PCs- GTEX")
-ggplot(WithSex_bothPCS,aes(x=PC1,y=PC2,col=gender))+geom_point(size=3)+theme_bw()+theme(plot.title=element_text(size=25),axis.text=element_text(size=15),axis.title=element_text(size=20),legend.title=element_blank(),legend.text=element_text(size=20))+scale_colour_manual(values=c("pink","blue","black"))+ggtitle("PC1 vs PC2")
-
- WithSex_bothPCS[grep("GTEX",rownames(WithSex_bothPCS)) && WithSex_bothPCS$gender=="Male","IndicatedSex"]<-"GTEx Male"
-# WithSex_bothPCS[grep("GTEX",rownames(WithSex_bothPCS)) && WithSex_bothPCS$gender=="Female","IndicatedSex"]<-"GTEx Female"
-# WithSex_bothPCS[rownames(WithSex_bothPCS) %in% c("BON_UC219.1_1", "BON_B12.74.1_1","BON_B16.22_1", "BON_UC473_1","BON_B16.19_1", "BON_B14.20_1"),"IndicatedSex"]<-"Patient Male"
-# 
-# WithSex_bothPCS[rownames(WithSex_bothPCS) %in% c("BON_B14.75.1_1" ,"BON_B12.33.2_1","BON_B09.27.1_1","BON_B14.71.2_1"),"IndicatedSex"]<-"Patient Female"
-
-
-#WithSex_bothPCS[rownames(WithSex_bothPCS$)]
+ggplot( all_xist_y %>% arrange(sex), aes( x = XIST, y = avg_y_chrom, col = as.factor(sex)))+geom_point(size = 3)+
+  plot_theme + colours + 
+  xlab("XIST expression") + ylab("Average of expression of sex-biased genes on y chromosome")
 
 dev.off()
 
-
-
-#Not normalizing at all 
-both<-as.matrix(AllSexBiased_RPKM_all)
-#x <- scale(both)
 hclustfunc <- function(x) hclust(x, method="complete")
 distfunc <- function(x) as.dist(1-cor(t(x),method = "spearman"))
-d <- distfunc(both)
+d <- distfunc(all_sex_biased)
 fit <- hclustfunc(d)
-x<-cutree(fit, k = 2)
-Clus1<-names(x[x==1])
-Clus2<-names(x[x==2])
+allClusters<-cutree(fit, k = 2)
 
 
-#Clus1 is all females
-determineSex <- function (cluster){
-  if(cluster==1){cat("Male patients are:")}
-  if(cluster==2){cat("Female patients are:")}
-}
+for (clusnum in 1:2){
+  clus <-  allClusters[allClusters==clusnum]
+  cluster <- unique(gsub("\\.[0-9]*$","",names(clus)))
+  cat('\n')
+  if('male' %in% cluster){
+    cat("\nMale patients are:")
+    for(elem in names(clus)){
+      if(grepl("male",elem)){next}
+      cat(paste("\n", elem))
+      }
+  }
+  if('female' %in% cluster){
+    cat("\nFemale patients are:")
+    for(elem in names(clus)){
+      if(grepl("female",elem)){next}
+      cat(paste("\n", elem))
+      }
+  }
+  }
 
-
-Clus1Short<-c()
-for(i in Clus1){
-  id = strsplit(as.character(i),split="\\.")[[1]]
-  subID = paste(id[1],"-",id[2],sep="")
-  Clus1Short<-c(Clus1Short,subID)
-}
-Clus2Short<-c()
-
-for(i in Clus2){
-  id = strsplit(as.character(i),split="\\.")[[1]]
-  subID = paste(id[1],"-",id[2],sep="")
-  Clus2Short<-c(Clus2Short,subID)
-}
-
-
-
-
-patientClus2<-Clus2[-grep("GTEX",Clus2)]
-patientClus1<-Clus1[-grep("GTEX",Clus1)]
-
-cat("\n")
-determineSex(unique(gtex_phenotypes[gtex_phenotypes$SUBJID%in%Clus1Short,"GENDER" ]))
-for(elem in patientClus1){
-  if(substr(elem, 1, 1)=="X"){cat(paste("\n",substr(elem,2,nchar(elem))))} 
-  else{cat(paste("\n",elem))}}
-  
-cat("\n")
-cat("\n")
-determineSex(unique(gtex_phenotypes[gtex_phenotypes$SUBJID%in%Clus2Short,"GENDER" ]))
-
-for(elem in patientClus2){
-  if(substr(elem, 1, 1)=="X"){cat(paste("\n",substr(elem,2,nchar(elem))))} 
-  else{cat(paste("\n",elem))}}
-cat("\n")
-
-
-
+    

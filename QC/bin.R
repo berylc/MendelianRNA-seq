@@ -1,70 +1,48 @@
-tissue_pref_genes<-read.delim("/humgen/atgu1/fs03/berylc/MuscDisease/Git/MendelianRNA-seq/data/TissuePreferentiallyExprGenes_FB_MSCK_SKN_ADBP.txt",header=T,stringsAsFactors=F)$gene
-
-extractGenesOfInterest<-function(rpkm_file,makecolnames=T,gene_list,patient_col=3,type=NA){
-  rpkm_file<-subset(rpkm_file, Description %in% gene_list)
-  rpkm_file$Name<-NULL
-  rownames(rpkm_file)<-rpkm_file$Description
-  rpkm_file$Description<-NULL
-  
-  if(makecolnames==T){colnames(rpkm_file)<-make.names(rep(type,ncol(rpkm_file)),unique=T)}
-  rpkm_file <- data.frame(t(rpkm_file),stringsAsFactors=F)
-  return(rpkm_file)}
+tissue_pref_genes <- read.delim("../data/tissue_preferential_genes_fibs.msck.skn.adbp.txt",header=T,stringsAsFactors=F)$ensg_id
+sex_biased_genes <- read.delim("../data/sex_biased_genes.txt",header=T,stringsAsFactors = F,strip.white=T)
 
 
-
-getSexBiased_xist_y<- function(rpkmfile,patientcolbegin=3,out,sexBiasedGenes_yChrom){
-  XIST<-rpkmfile[rpkmfile$Description=="XIST",patientcolbegin:ncol(rpkmfile)]
-  gtexYchrom<-data.frame(rpkmfile[rpkmfile$Description %in% sexBiasedGenes_yChrom$gene_name,patientcolbegin:ncol(rpkmfile)])
-  add_row<-nrow(gtexYchrom)+1
-  gtexYchrom[add_row,]<-apply(gtexYchrom,2,mean)
-  gtexYchromVals<-gtexYchrom[add_row,]
-  XIST<-data.frame(t(XIST),stringsAsFactors = F)
-  gtexYchromVals<-data.frame(t(gtexYchromVals),stringsAsFactors = F)
-  both<<-merge(XIST,gtexYchromVals,by="row.names")
-  names(both)<-c("sample","XIST","avgYchrom")
-  assign(x=paste("XIST_Y",out,sep="_"),value=both,envir=globalenv())
-}
-
-getSexBiasedAll <- function(rpkmfile,patientcolbegin=3,out,sexBiasedGenes){
-  SexBiased_all<-rpkmfile[rpkmfile$Description %in% sexBiasedGenes$gene_name,]
-  assign(x=paste("AllSexBiasedGenes",out,sep=""),value=SexBiased_all,envir=globalenv())
-}
-
-getcombinedPCAData<- function(rpkmfilegtex,rpkmfilepatients,out,sexBiasedGenes){   
-  SexBiased_gtex<-rpkmfilegtex[rpkmfilegtex$Description %in% sexBiasedGenes$gene_name,2:ncol(rpkmfilegtex)]     
-  SexBiased_patients<-rpkmfilepatients[rpkmfilepatients$Description %in% sexBiasedGenes$gene_name,2:ncol(rpkmfilepatients)]   
-  SexBiased_all<-merge(SexBiased_patients,SexBiased_gtex,by="Description")   
-  SexBiased_all<-SexBiased_all[!duplicated(SexBiased_all$Description),]   
-  SexBiased_all<-SexBiased_all[,2:ncol(SexBiased_all)]   
-  SexBiased_all <- SexBiased_all + 1   
-  SexBiased_all <- log2(SexBiased_all)   
-  SexBiased_all<-data.frame(t(SexBiased_all),stringsAsFactors = F)  
-  thrTissPCA<-prcomp(na.omit(SexBiased_all), retx=TRUE,na.action=na.omit,center=TRUE)   
-  assign(x=paste("AllSexBiased_RPKM",out,sep="_"),value=SexBiased_all,envir=globalenv()) 
-  assign(x=paste("PCADat",out,sep="_"),value=thrTissPCA,envir=globalenv()) }
-
-#After initial precompution, I changed this to work with patient files. Need to add Klinefelters samples to have it work again. 
-addPhenotype<- function (All,out,gtex_phenotypes){
-  PhenIds<-gtex_phenotypes$SUBJID
-  firstCol<-ncol(All)+1
-  secCol<-ncol(All)+2
-  for(m in 1:length(rownames(All))){
-    mS = strsplit(as.character(rownames(All)[m]),split="\\.")[[1]]
-    newID = paste(mS[1],"-",mS[2],sep="")
-    All[m,firstCol]<-newID
-    if(newID %in% PhenIds){
-      GenderCode=gtex_phenotypes[gtex_phenotypes$SUBJID==newID,"GENDER"]
-      if(GenderCode==1){All[m,secCol]<-"Male"}
-      if(GenderCode==2){All[m,secCol]<-"Female"}
-    }
-  #  if(rownames(All)[m] %in% KlinefeltersSamples){
-   #   All[m,secCol]<-"Klinefelter's"
-  #  }
-    if(!newID %in% PhenIds){All[m,secCol]<-"Patient"}
+extractGenesOfInterest<-function(rpkm_file,gene_list,patient_col=3){
+    gene_list <- sapply(strsplit(gene_list, split="\\."), function(x) x[1])
+    rpkm_file$Name <- sapply(strsplit(rpkm_file$Name, split="\\."), function(x) x[1])
     
-  }
-#  names(All)<-c("sample","XIST","avgYchrom","shortID","gender")
-  assign(x=paste("WithSex",out,sep="_"),value=All,envir=globalenv())
+    rpkm_file<-subset(rpkm_file, Name %in% gene_list, select = -c(Description))
+    
+    rownames(rpkm_file)<-rpkm_file$Name
+    rpkm_file <- subset(rpkm_file, select = -c(Name))
+    rpkm_file <- data.frame(t(rpkm_file),stringsAsFactors=F)
+    return(rpkm_file)
 }
 
 
+performPCA <- function(rpkm_file, annotation_column, expected_annotations){
+  rpkm_file  <-  log2(rpkm_file+1)
+  PCA <<- prcomp(as.matrix(rpkm_file),  retx=TRUE, na.action=na.omit, center=TRUE)
+
+  PoV <<- PCA$sdev^2/sum(PCA$sdev^2)
+  PCADat <- data.frame(PCA$x)
+
+  PCADat[,annotation_column] <- gsub("\\.[0-9]*$","",rownames(PCADat))
+
+  PCADat[!PCADat[,annotation_column] %in% expected_annotations, annotation_column] <- "Patient"
+
+  return(PCADat)
+}
+
+getXISTAvgYChromExpr <- function(rpkm_file, chrom_y_genes, annotation_column){
+  chrom_y_genes <- sapply(strsplit(chrom_y_genes, split="\\."), function(x) x[1])
+  chrom_y_genes <- intersect(names(rpkm_file), chrom_y_genes)
+  
+  XIST <- subset(rpkm_file, select = ENSG00000229807 )
+  chrom_y_genes <- subset(rpkm_file, select = chrom_y_genes )
+  chrom_y_genes$avg_y_chrom <- rowMeans(chrom_y_genes)
+  
+  xist_y_chrom <- merge(XIST, subset(chrom_y_genes, select= avg_y_chrom), by='row.names')
+  
+  xist_y_chrom[,"sex"] <- gsub("\\.[0-9]*$","",xist_y_chrom$Row.names)
+  xist_y_chrom[!xist_y_chrom$sex %in% c("male","female"), "sex"] <- "Patient"
+  
+  names(xist_y_chrom) <- c("sample","XIST","avg_y_chrom","sex")
+  return(xist_y_chrom)
+  
+}
