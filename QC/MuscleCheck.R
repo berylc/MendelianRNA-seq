@@ -19,7 +19,7 @@ all_patient <- extractGenesOfInterest(all_patient, gene_list=tissue_pref_genes)
  
 #Combine patient and GTEXs values perform PCA
 genes_in_both <- intersect(names(all_patient), names(all_gtex))
-all_Tissue <- rbind(subset(all_gtex, select = genes_in_both), subset(all_patient, select = genes_in_both))
+all_tissues <- rbind(subset(all_gtex, select = genes_in_both), subset(all_patient, select = genes_in_both))
 
 PCADat <- performPCA(all_tissues, "tissue",expected_annotations =tissue_list )
 
