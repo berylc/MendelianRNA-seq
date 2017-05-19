@@ -30,6 +30,10 @@ fqType=${12}
 #How are your fqs split up? possible values: readgroup or pairs
 outBamType=${13} 
 #output BAM format. possible values: sorted or unsorted
+starExecutable=${14}
+#path to STAR, e.g. STAR-STAR_2.4.2a/bin/Linux_x86_64/STAR
+
+
 case $j in
 -)
 	junctions=${11}
@@ -41,9 +45,7 @@ case $j in
 	;;
 esac
 
-# executables
-STAR=/path/to/star/executable
-# example : berylc/tools/STAR-STAR_2.4.2a/bin/Linux_x86_64/STAR 
+STAR=$starExecutable
 
 # STAR parameters: common for all runs
 STARparCommon=" --genomeDir $STARgenomeDir --readFilesIn $read1 $read2 --outSAMunmapped Within --outSAMmapqUnique 60 \

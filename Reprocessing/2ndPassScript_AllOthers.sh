@@ -3,6 +3,7 @@ tophatBam=$1
 fqDir=$2
 starPath=$3
 starGenomeFile=$4
+junctionFile=$5
 #Giving it the original TopHat bam, to extract sample name and get readgroups. 
 sampname=`basename $tophatBam | sed 's/.bam//'`
 fqPath=./$sampname
@@ -28,5 +29,5 @@ ReadGroups_${sampname}.txt \
 yes \
 - \
 readgroup \
-unsorted \
+sorted \
 $starPath

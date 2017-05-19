@@ -1,8 +1,9 @@
 #!/bin/bash
-loc=$1
-id=`basename $loc |sed 's/.bam//' ` 
+picard_jar=$1
+bam=$1
+id=`basename $bam |sed 's/.bam//' ` 
 mkdir $id
-java -jar -Xmx16g /path/to/picard.jar SamToFastq \
+java -jar -Xmx16g $picard_jar SamToFastq \
 INPUT=${loc} \
 OUTPUT_PER_RG=TRUE \
 OUTPUT_DIR=./$id \
