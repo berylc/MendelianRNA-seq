@@ -5,19 +5,31 @@
 # usage: from an empty working directory, run
 # ./STAR.sh (read1) (read2 or "") (STARgenomeDir) (dataType) (nThreadsSTAR) (sampleName) (readLength) (annotationFile) (readGroupAndOtherCommentsFile) (readFilesCommand) (junctionsFrom1Pass)
 
-read1=$1 # fastq file for read1
-read2=$2 # fastq file for read1, use "" if single-end
+read1=$1 
+#fastq file for read1
+read2=$2 
+#fastq file for read1, use "" if single-end
 STARgenomeDir=$3 
-dataType=$4 # RNA-seq type, possible values: str_SE str_PE unstr_SE unstr_PE
-nThreadsSTAR=$5 # number of threads for STAR
+dataType=$4 
+#RNA-seq type, possible values: str_SE str_PE unstr_SE unstr_PE
+nThreadsSTAR=$5 
+#number of threads for STAR
 sname=$6
-readLength=$7 #Current options: 25,50,76,125,150
-annotation=$8 # annotation file, use "-" if no annotation, annotations not needed if used at the genome generation step
+#output prefix
+readLength=$7 
+#possible values 25,50,76,125,150
+annotation=$8 
+#annotation file, use "-" if no annotation, annotations not needed if used at the genome generation step
 readGroups=$9
-zipped=${10} # yes for gzipped fastq files, no for unzipped
-j=${11} # path(s) to junction file(s)
-fqType=${12} #How are your fqs split up? "readgroup" or "pairs"
-outBamType=${13} #Want output to be  "sorted" or "unsorted" BAM?
+#file of read groups
+zipped=${10} 
+# yes for gzipped fastq files, no for unzipped
+j=${11} 
+# path(s) to junction file(s)
+fqType=${12} 
+#How are your fqs split up? possible values: readgroup or pairs
+outBamType=${13} 
+#output BAM format. possible values: sorted or unsorted
 case $j in
 -)
 	junctions=${11}
@@ -30,7 +42,8 @@ case $j in
 esac
 
 # executables
-STAR=/humgen/atgu1/fs03/berylc/tools/STAR-STAR_2.4.2a/bin/Linux_x86_64/STAR 
+STAR=/path/to/star/executable
+# example : berylc/tools/STAR-STAR_2.4.2a/bin/Linux_x86_64/STAR 
 
 # STAR parameters: common for all runs
 STARparCommon=" --genomeDir $STARgenomeDir --readFilesIn $read1 $read2 --outSAMunmapped Within --outSAMmapqUnique 60 \
