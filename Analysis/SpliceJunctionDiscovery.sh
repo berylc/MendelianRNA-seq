@@ -24,11 +24,11 @@ echo 'processing' $gene
 for i in `cat $bamList`
 do
 
-sample=`echo $i | awk -F"/" '{print $NF}' | cut -d "." -f 1`
+sample=`basename $i | sed 's/.sorted.deduped.bam//'`
 samtools view ${i} ${pos} | awk '($6 ~ /N/)' |awk '$5==60'| awk 'int($2)< 256' | awk -v sta=$start -v sto=$stop '$4>sta&&$4<sto {print $4,$6}' | cut -d "N" -f 1 | tr 'M' ' ' |  sed -r 's/[0-9]+S//' | awk -v s=$sample -v ge=$gene -v t=$gene_type -v chr=$chrom '{print ge,t,s,chr,$1+$2-1,$1+$2+$3,$2,$3,$4}' >> ${base}.splicing.txt
 done
 echo $gene 'is complete'
-python /humgen/atgu1/fs03/berylc/MuscDisease/SpliceRegions/results/allgenes/v4/scripts/summarizeModified.py <  ${base}.splicing.txt >> All.${groupname}.splicing.txt
+python ./SpliceJunctionSummary.py <  ${base}.splicing.txt >> All.${groupname}.splicing.txt
 rm ${base}.splicing.txt
 done
 
