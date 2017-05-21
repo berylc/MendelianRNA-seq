@@ -10,6 +10,6 @@ java -Xmx4000m -jar $gatk_jar \
 -contamination 0.0 \
 -R $hg_fasta \
 -U ALLOW_N_CIGAR_READS \
--L ../purcell.interval_list \
+-L ../data/purcell.interval_list \
 -I $bam \
 -o ${id}.vcf.gz
