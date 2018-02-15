@@ -18,7 +18,7 @@ samtools view -H $tophatBam  | egrep "^@RG" | cut -f2 | sort | sed ':a;N;$!ba;s/
 $allpair1 \
 $allpair2 \
 $starGenomeFile \
-str_PE \
+unstr_PE \
 8 \
 ${sampname}_1stPass \
 76 \
